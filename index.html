@@ -1,56 +1,28 @@
-<!-- header.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Header Feature</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    nav a {
-      color: white;
-      margin-left: 1rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        margin-top: 0.5rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>La Consolacion University</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <div class="logo">MySite</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Features</a>
-      <a href="#">Contact</a>
-    </nav>
+    <div class="overlay"></div>
+    <div class="navbar">
+      <img src="your-logo.png" alt="University Logo" class="logo">
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">COURSE</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="hero-text">
+      <h1>La Consolacion<br>University</h1>
+      <p>As a Catholic University, LCUP believes that a true Augustinian Marian student has a commitment to Christ-centered prophetic witnessing.</p>
+      <a href="#" class="cta-button">Visit Us To Know More</a>
+    </div>
   </header>
 </body>
 </html>
