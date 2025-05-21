@@ -1,35 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Button Feature</title>
-</head>
-<body>
-
-  <button onclick="messagepopup()" style = "background-color: limegreen; color: black; border-radius: 20px; font-size: 24px; padding: 12px 24px;">Buy</button> 
-<!-- pede palitan yung "Buy" depende sa content natin -->
-
-  <script>
-    function messagepopup() {
-      alert("Already bought the item");
-        // eto depende rin sa content
-    }
-  </script>
-
-<!-- ibang type na to ng button -->
-  <!-- dito para ma redirect -->
-
-    <br>
-
-    <a href="https://www.google.com">
-        <!-- palitan nalang yung nasa loob ng "" pede rin palitan kulay -->
-        <button style = "background-color: crimson; color: yellow; border-radius: 10px; font-size: 20px; padding: 15px 30px;">Take me to google</button>
-    </a>
-
-
-    <!-- eto toggle button kung gusto dark mode o light mode  -->
-
-    <br>
+    <title>La Consolacion University of the Philippines</title>
+    <link rel="stylesheet" href="style.css">
     <style>
     * {
       padding: 0;
@@ -46,13 +19,12 @@
 
     body.dark {
       background-color: black;
-      color: gray;
+      color: white;
     }
 
-    /* eto yung pwesto at ayos nung toggle button bahala na kung san ipwepwesto, ganon din sa iba*/
     .container {
+      padding: 30px 0 0;
       position: absolute;
-      top: 20px;
       right: 20px;
       display: flex;
       align-items: center;
@@ -86,7 +58,7 @@
     }
 
     input:checked + .button {
-      background-color: darkblue;
+      background-color: #141414;
     }
 
     input:checked + .button::before {
@@ -96,9 +68,33 @@
     .mode-text {
       font-size: 16px;
     }
-  </style>
+    </style>
 </head>
 <body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/LCUP.png" alt="lcup_logo" width="100"></img></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#facilities">ABOUT</a></li>
+                    <li><a href="#course">COURSE</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="content">
+            <h1>La Consolacion University</h1>
+            <p>As a Catholic University, LCUP believes that a true Augustinian Marian student has a commitment to Christ-centered prophetic witnessing.</p>
+            <button class="visit-btn">Visit Us To Know More</button>
+        </div>
+    </section>
+
+
+        <!-- second page  -->
+<!-- --------------------------------------- DARK MODE --------------------------------------------------  -->
 
   <div class="container">
     <span id="modeText" class="mode-text">Switch to Dark Mode</span>
@@ -121,37 +117,51 @@
 
     });
   </script>
+  <!-- -----------------------------------------------------------------------------------------  -->
+   
+  <!-- ACADEMIC PROGRAMS -->
+    <section class="course" id="course">
+        <h1>Academic Programs</h1>
+        <p>Explore our diverse range of courses designed to equip you with practical skills and in-depth knowledge for today's competitive world</p>
+        <div class="row">
+            <div class="course-col">
+                <h2 style="color: black;">Basic Education (K to 12)</h2>
+                <p>Our K to 12 program lays a strong foundation for lifelong learning, focusing on academic excellence and character development. We provide a well-rounded curriculum that nurtures intellectual, emotional, and social growth. From kindergarten to senior high school, students are guided to become confident and competent individuals.</p>
+            </div>
+            <div class="course-col">
+                <h2 style="color: black;">Colleges</h2>
+                <p>Our college programs are designed to equip students with industry-relevant skills and critical thinking abilities. With a strong emphasis on hands-on learning and professional development, we prepare graduates for success in their chosen careers. Each course is led by experienced faculty committed to academic excellence and student growth.</p>
+            </div>
+            <div class="course-col">
+                <h2 style="color: black;">Gradute Studies</h2>
+                <p>Our graduate programs offer advanced academic and professional training for individuals seeking to deepen their expertise. Whether you're pursuing a master’s degree for career advancement or personal fulfillment, we provide rigorous and research-driven instruction. Join a community of scholars committed to innovation, leadership, and impact.</p>
+            </div>
+        </div>
+    </section>    
 
-  <!-- eto naman kung may gusto reset button palitan nalang label pati nasa input -->
-    <form id = "myForm">
-        <label for = "name">Name</label>
-        <input type="text" id="name" name="name">
-        <br>
-        <label for = "address">Address</label>
-        <input type="text" id="address" name="address">
-        <br>
-        <label for = "email">Email</label>
-        <input type="text" id="email" name="email" required>
-        <br>
-        <label for = "password">Password</label>
-        <input type="password" id="password" name="password" required>
-        <br>
+        <!-- facilities -->
+        <section class="facilities" id="facilities">
+            <h1>Our Facilities</h1>
+            <p>Discover the modern facilities that support our students' learning, growth, and well-being.</p>
+            <div class="row">
+                <div class="facilities-col">
+                    <img src="images/library.jpg" alt="library_photo" width="300">
+                    <h3>St. Agustine Library</h3>
+                    <p>Our library provides a wide range of academic resources, from books and journals to digital databases. It’s a quiet, comfortable space for research, learning, and personal growth.</p>
+                </div>
+                <div class="facilities-col">
+                    <img src="images/stage.jpg" alt="podium_photo" width="300">
+                    <h3>Podium</h3>
+                    <p>Our podium serves as a central space for events, presentations, and student activities. It's designed to foster engagement, expression, and a sense of community.</p>
+                </div>
+                <div class="facilities-col">
+                    <img src="images/mini_forest.jpg" alt="mini_forest_photo" width="300">
+                    <h3>Thagaste Miniforest</h3>
+                    <p>The miniforest offers a peaceful green space on campus where students can relax, reflect, or study in a natural setting. It promotes well-being and environmental awareness within an academic environment.</p>
+                </div>
 
-        <button type="submit" style="background-color: green; color: black; border-radius: 5px;font-size: 12; padding: 8px 14px; ">Submit</button>
-        <button type="button" onclick="resetForm()" style="background-color: red; color: silver; border-radius: 5px;font-size: 12; padding: 8px 14px;">Reset</button>
-
-
-        <script>
-            function resetForm() {
-             document.getElementById("myForm").reset();
-            }
-        </script>
-
-    </form>
-
-  
- 
-
-
+            </div>
+        </section>
+</section>
 </body>
 </html>
