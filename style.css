@@ -22,3 +22,27 @@
     text-align: right;
     transition: 0.9s;
 }
+.nav-links ul li{
+    display: inline-block;
+    padding: 8px 12px;
+}nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}.nav-links ul li::after{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background: #72ADBE;   
+    display: block;     
+    transition: 0.3s;
+    margin: auto;
+}.nav-links ul li:hover::after{
+    width: 100%;
+}.content{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
