@@ -93,24 +93,50 @@
 
 
         <!-- second page  -->
+<!-- --------------------------------------- DARK MODE --------------------------------------------------  -->
+
+  <div class="container">
+    <span id="modeText" class="mode-text">Switch to Dark Mode</span>
+    <input type="checkbox" id="check">
+    <label for="check" class="button"></label>
+  </div>
+
+  <script>
+    const checkbox = document.getElementById('check');
+    const body = document.body;
+    const modeText = document.getElementById('modeText');
+
+
+
+    checkbox.addEventListener('change', () => {
+      const isDark = checkbox.checked;
+      body.classList.toggle('dark', isDark);
+      modeText.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+
+
+    });
+  </script>
+  <!-- -----------------------------------------------------------------------------------------  -->
+   
+  <!-- ACADEMIC PROGRAMS -->
     <section class="course" id="course">
         <h1>Academic Programs</h1>
         <p>Explore our diverse range of courses designed to equip you with practical skills and in-depth knowledge for today's competitive world</p>
         <div class="row">
             <div class="course-col">
-                <h3>Basic Education (K to 12)</h3>
+                <h2 style="color: black;">Basic Education (K to 12)</h2>
                 <p>Our K to 12 program lays a strong foundation for lifelong learning, focusing on academic excellence and character development. We provide a well-rounded curriculum that nurtures intellectual, emotional, and social growth. From kindergarten to senior high school, students are guided to become confident and competent individuals.</p>
             </div>
             <div class="course-col">
-                <h3>Colleges</h3>
+                <h2 style="color: black;">Colleges</h2>
                 <p>Our college programs are designed to equip students with industry-relevant skills and critical thinking abilities. With a strong emphasis on hands-on learning and professional development, we prepare graduates for success in their chosen careers. Each course is led by experienced faculty committed to academic excellence and student growth.</p>
             </div>
             <div class="course-col">
-                <h3>Gradute Studies</h3>
+                <h2 style="color: black;">Gradute Studies</h2>
                 <p>Our graduate programs offer advanced academic and professional training for individuals seeking to deepen their expertise. Whether you're pursuing a master’s degree for career advancement or personal fulfillment, we provide rigorous and research-driven instruction. Join a community of scholars committed to innovation, leadership, and impact.</p>
             </div>
         </div>
-    </section>    
+    </section>
 
         <!-- facilities -->
         <section class="facilities" id="facilities">
