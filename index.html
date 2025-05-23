@@ -1,8 +1,169 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Collaborative Webpage</title>
-  </head>
-  <body>
-  </body>
+<head>
+    <title>La Consolacion University of the Philippines</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      transition: background-color 0.3s, color 0.3s;
+      font-family: sans-serif;
+      background-color: white;
+      color: black;
+    }
+
+    body.dark {
+      background-color: black;
+      color: white;
+    }
+
+    .container {
+      padding: 30px 0 0;
+      position: absolute;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .button {
+      background-color: silver;
+      width: 120px;
+      height: 60px;
+      border-radius: 30px;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.3s;
+    }
+
+    .button::before {
+      position: absolute;
+      content: '';
+      background-color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      top: 5px;
+      left: 5px;
+      transition: transform 0.3s;
+    }
+
+    input:checked + .button {
+      background-color: #141414;
+    }
+
+    input:checked + .button::before {
+      transform: translateX(60px);
+    }
+
+    .mode-text {
+      font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/LCUP.png" alt="lcup_logo" width="100"></img></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#facilities">ABOUT</a></li>
+                    <li><a href="#course">COURSE</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="content">
+            <h1>La Consolacion University</h1>
+            <p>As a Catholic University, LCUP believes that a true Augustinian Marian student has a commitment to Christ-centered prophetic witnessing.</p>
+            <a href="https://www.google.com/maps?q=La+Consolacion+University+of+the+Philippines" target="_blank">
+            <button class="visit-btn">Visit Us To Know More</button>
+            </a>
+        </div>
+    </section>
+
+
+        <!-- second page  -->
+<!-- --------------------------------------- DARK MODE --------------------------------------------------  -->
+
+  <div class="container">
+    <span id="modeText" class="mode-text">Switch to Dark Mode</span>
+    <input type="checkbox" id="check">
+    <label for="check" class="button"></label>
+  </div>
+
+  <script>
+    const checkbox = document.getElementById('check');
+    const body = document.body;
+    const modeText = document.getElementById('modeText');
+
+
+
+    checkbox.addEventListener('change', () => {
+      const isDark = checkbox.checked;
+      body.classList.toggle('dark', isDark);
+      modeText.textContent = isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+
+
+    });
+  </script>
+  <!-- -----------------------------------------------------------------------------------------  -->
+   
+  <!-- ACADEMIC PROGRAMS -->
+    <section class="course" id="course">
+        <h1>Academic Programs</h1>
+        <p>Explore our diverse range of courses designed to equip you with practical skills and in-depth knowledge for today's competitive world</p>
+        <div class="row">
+            <div class="course-col">
+                <h2 style="color: black;">Basic Education (K to 12)</h2>
+                <p>Our K to 12 program lays a strong foundation for lifelong learning, focusing on academic excellence and character development. We provide a well-rounded curriculum that nurtures intellectual, emotional, and social growth. From kindergarten to senior high school, students are guided to become confident and competent individuals.</p>
+            </div>
+            <div class="course-col">
+                <h2 style="color: black;">Colleges</h2>
+                <p>Our college programs are designed to equip students with industry-relevant skills and critical thinking abilities. With a strong emphasis on hands-on learning and professional development, we prepare graduates for success in their chosen careers. Each course is led by experienced faculty committed to academic excellence and student growth.</p>
+            </div>
+            <div class="course-col">
+                <h2 style="color: black;">Gradute Studies</h2>
+                <p>Our graduate programs offer advanced academic and professional training for individuals seeking to deepen their expertise. Whether you're pursuing a master’s degree for career advancement or personal fulfillment, we provide rigorous and research-driven instruction. Join a community of scholars committed to innovation, leadership, and impact.</p>
+            </div>
+        </div>
+    </section>    
+
+        <!-- facilities -->
+        <section class="facilities" id="facilities">
+            <h1>Our Facilities</h1>
+            <p>Discover the modern facilities that support our students' learning, growth, and well-being.</p>
+            <div class="row">
+                <div class="facilities-col">
+                    <img src="images/library.jpg" alt="library_photo" width="300">
+                    <h3>St. Agustine Library</h3>
+                    <p>Our library provides a wide range of academic resources, from books and journals to digital databases. It’s a quiet, comfortable space for research, learning, and personal growth.</p>
+                </div>
+                <div class="facilities-col">
+                    <img src="images/stage.jpg" alt="podium_photo" width="300">
+                    <h3>Podium</h3>
+                    <p>Our podium serves as a central space for events, presentations, and student activities. It's designed to foster engagement, expression, and a sense of community.</p>
+                </div>
+                <div class="facilities-col">
+                    <img src="images/mini_forest.jpg" alt="mini_forest_photo" width="300">
+                    <h3>Thagaste Miniforest</h3>
+                    <p>The miniforest offers a peaceful green space on campus where students can relax, reflect, or study in a natural setting. It promotes well-being and environmental awareness within an academic environment.</p>
+                </div>
+
+            </div>
+        </section>
+</section>
+</body>
 </html>
